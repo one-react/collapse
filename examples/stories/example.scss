@@ -1,0 +1,98 @@
+@import "~or-theme";
+.wrapper {
+  display: inline-block;
+  font-family: Helvetica,sans-serif;
+
+  .or-collapse {
+    margin-left: 20px;
+
+    .or-collapse-name {
+      width: 100px;
+      position: relative;
+
+      .collapse-icon {
+        position: absolute;
+        right: 0;
+        top: 14px;
+        width: 11px;
+        height: 2px;
+        background-color: $gray6;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 11px;
+          height: 2px;
+          background-color: $gray6;
+          transform: rotate(90deg);
+          transition: transform .25s linear;
+        }
+      }
+    }
+
+    &.active {
+      .or-collapse-name {
+        .collapse-icon {
+          height: 2px;
+          &::after {
+            height: 2px;
+            transform: rotate(180deg);
+            transition: transform .25s linear;
+          }
+        }
+      }
+    }
+
+    .overlay {
+      width: 200px;
+      color: $gray5;
+    }
+  }
+
+  .or-collapse + .or-collapse {
+    margin-top: 10px;
+  }
+
+  .menu-wrapper {
+    margin-left: 10px;
+    .item {
+      padding: 5px 0;
+      line-height: 20px;
+      font-size: 12px;
+      color: $gray6;
+      cursor: pointer;
+    }
+  }
+}
+
+.wrapper2 {
+  display: flex;
+  font-family: Helvetica,sans-serif;
+
+  .or-dropdown {
+    margin-left: 20px;
+
+    .or-dropdown-name {
+      position: relative;
+    }
+
+    .overlay {
+      width: 200px;
+      color: $gray5;
+    }
+  }
+
+  .menu-wrapper {
+    .item {
+      padding: 5px;
+      line-height: 20px;
+      font-size: 12px;
+      color: $gray6;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $gray1;
+      }
+    }
+  }
+}
