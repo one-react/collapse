@@ -27,7 +27,7 @@ class Example extends React.Component {
   render () {
     return (
       <div className='wrapper'>
-        <Collapse maskClose overlay={menu1} isOpen={!this.state.isOpen} onChange={this.handleChange}>
+        <Collapse overlay={menu1} isOpen={!this.state.isOpen} onChange={this.handleChange}>
           <div className='or-collapse-name'>
             <div>Category</div>
             <div className='collapse-icon'/>
@@ -40,12 +40,17 @@ class Example extends React.Component {
             <div className='collapse-icon'/>
           </div>
         </Collapse>
+        <br />
+        <Collapse overlay={menu2} isOpen={this.state.isOpen}>
+          <div className='or-collapse-name'>
+            <div>Material</div>
+          </div>
+        </Collapse>
       </div>
     )
   }
 
   handleChange = (isOpen) => {
-    console.log('onchange', isOpen)
     this.setState({
       isOpen: isOpen
     })
