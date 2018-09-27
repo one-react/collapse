@@ -1,7 +1,8 @@
 @import "~or-theme";
 
-.#{$prefix}-collapse {
+.or-collapse {
   position: relative;
+  font-family: $font-family;
 
   .or-collapse-name {
     display: flex;
@@ -11,12 +12,12 @@
     cursor: pointer;
   }
 
-  .overlay {
+  .or-overlay {
     display: none;
   }
 
-  &.active {
-    .overlay {
+  &.or-collapse-open {
+    .or-overlay {
       display: block;
     }
   }
