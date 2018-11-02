@@ -1,2 +1,2 @@
 import './styles.scss'
-export { Collapse } from './Collapse'
+export { Collapse as default } from './Collapse'

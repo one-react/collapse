@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Collapse } from '../../src'
+import Collapse from 'or-collapse'
 
 const menu1 = (
   <div className="menu-wrapper">
