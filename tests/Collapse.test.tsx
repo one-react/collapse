@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React, { PureComponent } from 'react'
 
-import { Collapse } from '../src'
+import Collapse from '../src'
 
 const mockCallBack = jest.fn()
 let wrapper
