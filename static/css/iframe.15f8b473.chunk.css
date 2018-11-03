@@ -1,0 +1,66 @@
+.or-collapse {
+  position: relative;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .or-collapse .or-collapse-name {
+    display: flex;
+    line-height: 30px;
+    color: #424242;
+    font-size: 14px;
+    cursor: pointer; }
+  .or-collapse .or-overlay {
+    display: none; }
+  .or-collapse.or-collapse-open .or-overlay {
+    display: block; }
+
+.wrapper {
+  display: inline-block;
+  font-family: Helvetica,sans-serif; }
+  .wrapper .or-collapse {
+    margin-left: 20px; }
+    .wrapper .or-collapse .or-collapse-name {
+      width: 100px;
+      position: relative; }
+      .wrapper .or-collapse .or-collapse-name .collapse-icon {
+        position: absolute;
+        right: 0;
+        top: 14px;
+        width: 11px;
+        height: 2px;
+        background-color: #616161; }
+        .wrapper .or-collapse .or-collapse-name .collapse-icon::after {
+          position: absolute;
+          content: '';
+          width: 11px;
+          height: 2px;
+          background-color: #616161;
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg);
+          transition: -webkit-transform .25s linear;
+          transition: transform .25s linear;
+          transition: transform .25s linear, -webkit-transform .25s linear; }
+    .wrapper .or-collapse.or-collapse-open .or-collapse-name .collapse-icon {
+      height: 2px; }
+      .wrapper .or-collapse.or-collapse-open .or-collapse-name .collapse-icon::after {
+        height: 2px;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+        transition: -webkit-transform .25s linear;
+        transition: transform .25s linear;
+        transition: transform .25s linear, -webkit-transform .25s linear; }
+    .wrapper .or-collapse .overlay {
+      width: 200px; }
+  .wrapper .or-collapse + .or-collapse {
+    margin-top: 10px; }
+  .wrapper .menu-wrapper {
+    margin-left: 10px; }
+    .wrapper .menu-wrapper .item {
+      padding: 5px 0;
+      line-height: 20px;
+      font-size: 12px;
+      color: #757575;
+      cursor: pointer; }
+      .wrapper .menu-wrapper .item:hover {
+        color: #424242; }
+
+
+/*# sourceMappingURL=iframe.15f8b473.chunk.css.map*/
