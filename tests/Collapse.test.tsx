@@ -17,7 +17,7 @@ const menu = (
 describe('src/index', () => {
   describe('default open', () => {
     beforeEach(() => {
-      wrapper = mount(<CollapseWrapper defaultOpen={true} />)
+      wrapper = mount(<CollapseWrapper defaultOpen={true} className="hello" />)
     })
 
     afterEach(() => {
@@ -27,6 +27,7 @@ describe('src/index', () => {
 
     it('should render properly: open', () => {
       expect(wrapper.find('.or-collapse').length).toBe(1)
+      expect(wrapper.find('.or-collapse').hasClass('hello')).toBe(true)
       expect(wrapper.find('.or-collapse').hasClass('or-collapse-open')).toBe(
         true
       )
@@ -46,6 +47,7 @@ describe('src/index', () => {
 
 interface Props {
   defaultOpen: boolean
+  className?: string
 }
 
 class CollapseWrapper extends PureComponent<Props, {}> {
@@ -55,6 +57,7 @@ class CollapseWrapper extends PureComponent<Props, {}> {
   render() {
     return (
       <Collapse
+        className={this.props.className}
         overlay={menu}
         isOpen={this.state.isOpen}
         onChange={this.handleChange}

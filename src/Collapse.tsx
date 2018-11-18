@@ -3,6 +3,10 @@ import React, { PureComponent } from 'react'
 
 interface Props {
   /**
+   * customer className for modal
+   */
+  className?: string
+  /**
    * whether the ovelay of collapse should be shown or not
    **/
   isOpen: boolean
@@ -24,12 +28,13 @@ interface Props {
 }
 export class Collapse extends PureComponent<Props, {}> {
   render() {
-    const { children, overlay, isOpen } = this.props
+    const { children, overlay, isOpen, className } = this.props
     const collapseClass = clx(
       {
         'or-collapse-open': isOpen
       },
-      'or-collapse'
+      'or-collapse',
+      className
     )
     const overlayClass = clx('or-overlay')
 
