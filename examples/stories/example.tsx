@@ -39,6 +39,7 @@ class Example extends React.Component {
     return (
       <div className="wrapper">
         <Collapse
+          className="hello"
           overlay={menu1}
           isOpen={this.state.isOpen1}
           onChange={this.handleChange('isOpen1')}
